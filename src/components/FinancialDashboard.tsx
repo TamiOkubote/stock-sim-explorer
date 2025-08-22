@@ -8,6 +8,7 @@ import { VaRDiagram } from "./risk/VaRDiagram";
 import { MetropolisHastings } from "./simulations/MetropolisHastings";
 import { StockSelector } from "./stocks/StockSelector";
 import { TrendingUp, Activity, Shield, BarChart3 } from "lucide-react";
+import { useState } from "react";
 
 const topStocks = [
   { symbol: "AAPL", name: "Apple Inc.", price: 175.43, change: 2.34, changePercent: 1.35 },
@@ -18,6 +19,12 @@ const topStocks = [
 ];
 
 export const FinancialDashboard = () => {
+  const [selectedStocksForAnalysis, setSelectedStocksForAnalysis] = useState<string[]>([]);
+
+  const handleAnalysisRun = (stocks: string[]) => {
+    setSelectedStocksForAnalysis(stocks);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -52,7 +59,7 @@ export const FinancialDashboard = () => {
       {/* Main Dashboard */}
       <main className="container mx-auto px-6 py-6 space-y-6">
         {/* Stock Selection */}
-        <StockSelector stocks={topStocks} />
+        <StockSelector stocks={topStocks} onAnalysisRun={handleAnalysisRun} />
 
         {/* Main Analytics Grid */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">

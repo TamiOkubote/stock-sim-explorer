@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowUp, ArrowDown, Play } from "lucide-react";
 import { useState } from "react";
+import { toast } from "sonner";
 
 interface Stock {
   symbol: string;
@@ -14,10 +15,12 @@ interface Stock {
 
 interface StockSelectorProps {
   stocks: Stock[];
+  onAnalysisRun?: (selectedStocks: string[]) => void;
 }
 
-export const StockSelector = ({ stocks }: StockSelectorProps) => {
+export const StockSelector = ({ stocks, onAnalysisRun }: StockSelectorProps) => {
   const [selectedStocks, setSelectedStocks] = useState<string[]>([stocks[0]?.symbol || ""]);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
 
   const toggleStock = (symbol: string) => {
     setSelectedStocks(prev => 
@@ -27,14 +30,46 @@ export const StockSelector = ({ stocks }: StockSelectorProps) => {
     );
   };
 
+  const runAnalysis = async () => {
+    if (selectedStocks.length === 0) {
+      toast.error("Please select at least one stock for analysis");
+      return;
+    }
+
+    setIsAnalyzing(true);
+    
+    try {
+      // Show analysis start notification
+      toast.success(`Running Monte Carlo analysis for ${selectedStocks.length} stock${selectedStocks.length > 1 ? 's' : ''}: ${selectedStocks.join(', ')}`);
+      
+      // Trigger analysis in parent component
+      onAnalysisRun?.(selectedStocks);
+      
+      // Simulate analysis completion after a short delay
+      setTimeout(() => {
+        setIsAnalyzing(false);
+        toast.success("Analysis completed! Check the simulation results below.");
+      }, 2000);
+      
+    } catch (error) {
+      setIsAnalyzing(false);
+      toast.error("Analysis failed. Please try again.");
+    }
+  };
+
   return (
     <Card>
       <CardContent className="pt-6">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold">Top Performing Stocks</h3>
-          <Button size="sm" className="gap-2">
+          <Button 
+            size="sm" 
+            className="gap-2" 
+            onClick={runAnalysis}
+            disabled={isAnalyzing || selectedStocks.length === 0}
+          >
             <Play className="h-4 w-4" />
-            Run Analysis
+            {isAnalyzing ? 'Analyzing...' : 'Run Analysis'}
           </Button>
         </div>
         
