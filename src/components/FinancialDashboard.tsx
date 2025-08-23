@@ -6,6 +6,7 @@ import { RSIFilter } from "./filters/RSIFilter";
 import { RiskMatrix } from "./risk/RiskMatrix";
 import { VaRDiagram } from "./risk/VaRDiagram";
 import { MetropolisHastings } from "./simulations/MetropolisHastings";
+import { GibbsSampling } from "./simulations/GibbsSampling";
 import { StockSelector } from "./stocks/StockSelector";
 import { StandardDeviation } from "./metrics/StandardDeviation";
 import { BetaAnalysis } from "./metrics/BetaAnalysis";
@@ -120,9 +121,10 @@ export const FinancialDashboard = () => {
 
         {/* Advanced Analytics */}
         <Tabs defaultValue="var" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="var">Value at Risk</TabsTrigger>
             <TabsTrigger value="mh">Metropolis-Hastings</TabsTrigger>
+            <TabsTrigger value="gibbs">Gibbs Sampling</TabsTrigger>
           </TabsList>
           
           <TabsContent value="var" className="space-y-4">
@@ -143,6 +145,17 @@ export const FinancialDashboard = () => {
               </CardHeader>
               <CardContent>
                 <MetropolisHastings />
+              </CardContent>
+            </Card>
+          </TabsContent>
+          
+          <TabsContent value="gibbs" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Gibbs Sampling Simulation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <GibbsSampling />
               </CardContent>
             </Card>
           </TabsContent>
