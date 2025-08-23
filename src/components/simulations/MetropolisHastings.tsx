@@ -26,7 +26,7 @@ export const MetropolisHastings = () => {
   const [currentIteration, setCurrentIteration] = useState(0);
   const [acceptanceRate, setAcceptanceRate] = useState(0);
   const [convergence, setConvergence] = useState(false);
-  const maxIterations = 5000;
+  const maxIterations = 1000;
 
   // Target distribution: Normal with unknown parameters
   const targetData = [175, 172, 178, 176, 174, 179, 173, 177, 175, 176]; // Sample stock prices
