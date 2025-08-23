@@ -6,7 +6,6 @@ import { RSIFilter } from "./filters/RSIFilter";
 import { RiskMatrix } from "./risk/RiskMatrix";
 import { VaRDiagram } from "./risk/VaRDiagram";
 import { MetropolisHastings } from "./simulations/MetropolisHastings";
-import { GibbsSampling } from "./simulations/GibbsSampling";
 import { StockSelector } from "./stocks/StockSelector";
 import { StandardDeviation } from "./metrics/StandardDeviation";
 import { BetaAnalysis } from "./metrics/BetaAnalysis";
@@ -25,11 +24,9 @@ const topStocks = [
 
 export const FinancialDashboard = () => {
   const [selectedStocksForAnalysis, setSelectedStocksForAnalysis] = useState<string[]>([]);
-  const [analysisTrigger, setAnalysisTrigger] = useState(0);
 
   const handleAnalysisRun = (stocks: string[]) => {
     setSelectedStocksForAnalysis(stocks);
-    setAnalysisTrigger(prev => prev + 1);
   };
 
   return (
@@ -82,11 +79,7 @@ export const FinancialDashboard = () => {
               </Badge>
             </CardHeader>
             <CardContent>
-              <MCMCSimulation 
-                selectedStocks={selectedStocksForAnalysis}
-                stockData={topStocks}
-                analysisTrigger={analysisTrigger}
-              />
+              <MCMCSimulation />
             </CardContent>
           </Card>
 
@@ -127,10 +120,9 @@ export const FinancialDashboard = () => {
 
         {/* Advanced Analytics */}
         <Tabs defaultValue="var" className="w-full">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="var">Value at Risk</TabsTrigger>
             <TabsTrigger value="mh">Metropolis-Hastings</TabsTrigger>
-            <TabsTrigger value="gibbs">Gibbs Sampling</TabsTrigger>
           </TabsList>
           
           <TabsContent value="var" className="space-y-4">
@@ -151,17 +143,6 @@ export const FinancialDashboard = () => {
               </CardHeader>
               <CardContent>
                 <MetropolisHastings />
-              </CardContent>
-            </Card>
-          </TabsContent>
-          
-          <TabsContent value="gibbs" className="space-y-4">
-            <Card>
-              <CardHeader>
-                <CardTitle>Gibbs Sampling Simulation</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <GibbsSampling />
               </CardContent>
             </Card>
           </TabsContent>
