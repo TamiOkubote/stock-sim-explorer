@@ -25,9 +25,11 @@ const topStocks = [
 
 export const FinancialDashboard = () => {
   const [selectedStocksForAnalysis, setSelectedStocksForAnalysis] = useState<string[]>([]);
+  const [analysisTrigger, setAnalysisTrigger] = useState(0);
 
   const handleAnalysisRun = (stocks: string[]) => {
     setSelectedStocksForAnalysis(stocks);
+    setAnalysisTrigger(prev => prev + 1);
   };
 
   return (
@@ -80,7 +82,11 @@ export const FinancialDashboard = () => {
               </Badge>
             </CardHeader>
             <CardContent>
-              <MCMCSimulation />
+              <MCMCSimulation 
+                selectedStocks={selectedStocksForAnalysis}
+                stockData={topStocks}
+                analysisTrigger={analysisTrigger}
+              />
             </CardContent>
           </Card>
 
