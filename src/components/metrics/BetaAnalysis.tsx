@@ -54,6 +54,71 @@ const mockBetaData: BetaData[] = [
     ]
   },
   { 
+    symbol: "AAPL", 
+    beta: 1.15, 
+    correlation: 0.78, 
+    volatility: "More",
+    marketData: [
+      { period: 1, stock: 2.3, market: 1.8 },
+      { period: 2, stock: -1.5, market: -0.9 },
+      { period: 3, stock: 3.2, market: 2.1 },
+      { period: 4, stock: 0.8, market: 1.2 },
+      { period: 5, stock: -2.1, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "GOOGL", 
+    beta: 1.04, 
+    correlation: 0.73, 
+    volatility: "Similar",
+    marketData: [
+      { period: 1, stock: 1.9, market: 1.8 },
+      { period: 2, stock: -0.9, market: -0.9 },
+      { period: 3, stock: 2.2, market: 2.1 },
+      { period: 4, stock: 1.2, market: 1.2 },
+      { period: 5, stock: -1.5, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "NVDA", 
+    beta: 1.67, 
+    correlation: 0.71, 
+    volatility: "More",
+    marketData: [
+      { period: 1, stock: 4.2, market: 1.8 },
+      { period: 2, stock: -2.8, market: -0.9 },
+      { period: 3, stock: 5.1, market: 2.1 },
+      { period: 4, stock: 0.3, market: 1.2 },
+      { period: 5, stock: -3.2, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "AMZN", 
+    beta: 1.28, 
+    correlation: 0.76, 
+    volatility: "More",
+    marketData: [
+      { period: 1, stock: 2.5, market: 1.8 },
+      { period: 2, stock: -1.3, market: -0.9 },
+      { period: 3, stock: 2.9, market: 2.1 },
+      { period: 4, stock: 1.4, market: 1.2 },
+      { period: 5, stock: -1.8, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "MSFT", 
+    beta: 0.89, 
+    correlation: 0.82, 
+    volatility: "Less",
+    marketData: [
+      { period: 1, stock: 1.8, market: 1.8 },
+      { period: 2, stock: -0.7, market: -0.9 },
+      { period: 3, stock: 2.1, market: 2.1 },
+      { period: 4, stock: 1.1, market: 1.2 },
+      { period: 5, stock: -1.2, market: -1.4 },
+    ]
+  },
+  { 
     symbol: "XOM", 
     beta: 1.08, 
     correlation: 0.79, 

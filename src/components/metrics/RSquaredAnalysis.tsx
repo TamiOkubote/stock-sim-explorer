@@ -67,6 +67,91 @@ const mockRSquaredData: RSquaredData[] = [
     ]
   },
   {
+    symbol: "AAPL",
+    rSquared: 0.72,
+    correlation: 0.85,
+    diversification: "Low",
+    benchmarkFit: "Good",
+    scatterData: [
+      { marketReturn: 2.1, stockReturn: 2.8 },
+      { marketReturn: -1.5, stockReturn: -1.9 },
+      { marketReturn: 3.2, stockReturn: 3.8 },
+      { marketReturn: 0.8, stockReturn: 1.2 },
+      { marketReturn: -2.1, stockReturn: -2.5 },
+      { marketReturn: 1.9, stockReturn: 2.2 },
+      { marketReturn: -0.5, stockReturn: -0.8 },
+      { marketReturn: 2.8, stockReturn: 3.1 },
+    ]
+  },
+  {
+    symbol: "GOOGL",
+    rSquared: 0.66,
+    correlation: 0.81,
+    diversification: "Low",
+    benchmarkFit: "Good",
+    scatterData: [
+      { marketReturn: 2.1, stockReturn: 2.2 },
+      { marketReturn: -1.5, stockReturn: -1.3 },
+      { marketReturn: 3.2, stockReturn: 3.1 },
+      { marketReturn: 0.8, stockReturn: 0.9 },
+      { marketReturn: -2.1, stockReturn: -2.0 },
+      { marketReturn: 1.9, stockReturn: 1.8 },
+      { marketReturn: -0.5, stockReturn: -0.4 },
+      { marketReturn: 2.8, stockReturn: 2.7 },
+    ]
+  },
+  {
+    symbol: "NVDA",
+    rSquared: 0.45,
+    correlation: 0.67,
+    diversification: "Medium",
+    benchmarkFit: "Fair",
+    scatterData: [
+      { marketReturn: 2.1, stockReturn: 4.2 },
+      { marketReturn: -1.5, stockReturn: -3.1 },
+      { marketReturn: 3.2, stockReturn: 5.8 },
+      { marketReturn: 0.8, stockReturn: 0.3 },
+      { marketReturn: -2.1, stockReturn: -3.9 },
+      { marketReturn: 1.9, stockReturn: 3.1 },
+      { marketReturn: -0.5, stockReturn: -1.8 },
+      { marketReturn: 2.8, stockReturn: 4.9 },
+    ]
+  },
+  {
+    symbol: "AMZN",
+    rSquared: 0.61,
+    correlation: 0.78,
+    diversification: "Medium",
+    benchmarkFit: "Good",
+    scatterData: [
+      { marketReturn: 2.1, stockReturn: 2.7 },
+      { marketReturn: -1.5, stockReturn: -1.8 },
+      { marketReturn: 3.2, stockReturn: 3.9 },
+      { marketReturn: 0.8, stockReturn: 0.5 },
+      { marketReturn: -2.1, stockReturn: -2.6 },
+      { marketReturn: 1.9, stockReturn: 2.4 },
+      { marketReturn: -0.5, stockReturn: -0.9 },
+      { marketReturn: 2.8, stockReturn: 3.4 },
+    ]
+  },
+  {
+    symbol: "MSFT",
+    rSquared: 0.68,
+    correlation: 0.82,
+    diversification: "Low",
+    benchmarkFit: "Good",
+    scatterData: [
+      { marketReturn: 2.1, stockReturn: 2.3 },
+      { marketReturn: -1.5, stockReturn: -1.2 },
+      { marketReturn: 3.2, stockReturn: 3.1 },
+      { marketReturn: 0.8, stockReturn: 1.1 },
+      { marketReturn: -2.1, stockReturn: -1.8 },
+      { marketReturn: 1.9, stockReturn: 2.0 },
+      { marketReturn: -0.5, stockReturn: -0.3 },
+      { marketReturn: 2.8, stockReturn: 2.9 },
+    ]
+  },
+  {
     symbol: "XOM",
     rSquared: 0.74,
     correlation: 0.86,

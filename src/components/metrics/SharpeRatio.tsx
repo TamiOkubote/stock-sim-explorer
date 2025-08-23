@@ -65,6 +65,86 @@ const mockSharpeData: SharpeData[] = [
     ]
   },
   {
+    symbol: "AAPL",
+    sharpeRatio: 1.23,
+    expectedReturn: 0.145,
+    riskFreeRate: 0.045,
+    standardDeviation: 0.081,
+    rating: "Good",
+    monthlyReturns: [
+      { month: "Jan", return: 0.12, risk: 0.08 },
+      { month: "Feb", return: 0.15, risk: 0.09 },
+      { month: "Mar", return: 0.18, risk: 0.07 },
+      { month: "Apr", return: 0.11, risk: 0.10 },
+      { month: "May", return: 0.14, risk: 0.08 },
+      { month: "Jun", return: 0.16, risk: 0.09 },
+    ]
+  },
+  {
+    symbol: "GOOGL",
+    sharpeRatio: 1.08,
+    expectedReturn: 0.138,
+    riskFreeRate: 0.045,
+    standardDeviation: 0.086,
+    rating: "Good",
+    monthlyReturns: [
+      { month: "Jan", return: 0.14, risk: 0.09 },
+      { month: "Feb", return: 0.12, risk: 0.08 },
+      { month: "Mar", return: 0.16, risk: 0.10 },
+      { month: "Apr", return: 0.11, risk: 0.07 },
+      { month: "May", return: 0.15, risk: 0.09 },
+      { month: "Jun", return: 0.13, risk: 0.08 },
+    ]
+  },
+  {
+    symbol: "NVDA",
+    sharpeRatio: 0.89,
+    expectedReturn: 0.198,
+    riskFreeRate: 0.045,
+    standardDeviation: 0.172,
+    rating: "Fair",
+    monthlyReturns: [
+      { month: "Jan", return: 0.25, risk: 0.18 },
+      { month: "Feb", return: 0.12, risk: 0.15 },
+      { month: "Mar", return: 0.31, risk: 0.20 },
+      { month: "Apr", return: 0.08, risk: 0.16 },
+      { month: "May", return: 0.22, risk: 0.17 },
+      { month: "Jun", return: 0.19, risk: 0.19 },
+    ]
+  },
+  {
+    symbol: "AMZN",
+    sharpeRatio: 0.94,
+    expectedReturn: 0.165,
+    riskFreeRate: 0.045,
+    standardDeviation: 0.128,
+    rating: "Fair",
+    monthlyReturns: [
+      { month: "Jan", return: 0.18, risk: 0.13 },
+      { month: "Feb", return: 0.14, risk: 0.12 },
+      { month: "Mar", return: 0.19, risk: 0.15 },
+      { month: "Apr", return: 0.12, risk: 0.11 },
+      { month: "May", return: 0.17, risk: 0.14 },
+      { month: "Jun", return: 0.15, risk: 0.13 },
+    ]
+  },
+  {
+    symbol: "MSFT",
+    sharpeRatio: 1.56,
+    expectedReturn: 0.132,
+    riskFreeRate: 0.045,
+    standardDeviation: 0.056,
+    rating: "Excellent",
+    monthlyReturns: [
+      { month: "Jan", return: 0.13, risk: 0.05 },
+      { month: "Feb", return: 0.14, risk: 0.06 },
+      { month: "Mar", return: 0.12, risk: 0.05 },
+      { month: "Apr", return: 0.15, risk: 0.07 },
+      { month: "May", return: 0.13, risk: 0.05 },
+      { month: "Jun", return: 0.11, risk: 0.06 },
+    ]
+  },
+  {
     symbol: "XOM",
     sharpeRatio: 1.34,
     expectedReturn: 0.142,

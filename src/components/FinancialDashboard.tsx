@@ -18,6 +18,11 @@ const topStocks = [
   { symbol: "LLY", name: "Eli Lilly & Co", price: 789.45, change: 12.34, changePercent: 1.59 },
   { symbol: "META", name: "Meta Platforms Inc.", price: 521.78, change: -8.92, changePercent: -1.68 },
   { symbol: "TSLA", name: "Tesla Inc.", price: 243.15, change: 5.67, changePercent: 2.39 },
+  { symbol: "AAPL", name: "Apple Inc.", price: 175.43, change: 2.34, changePercent: 1.35 },
+  { symbol: "GOOGL", name: "Alphabet Inc.", price: 142.56, change: 0.89, changePercent: 0.63 },
+  { symbol: "NVDA", name: "NVIDIA Corp.", price: 891.14, change: 15.67, changePercent: 1.79 },
+  { symbol: "AMZN", name: "Amazon.com Inc.", price: 155.21, change: -2.11, changePercent: -1.34 },
+  { symbol: "MSFT", name: "Microsoft Corp.", price: 378.85, change: -1.22, changePercent: -0.32 },
   { symbol: "XOM", name: "Exxon Mobil Corp.", price: 118.23, change: 1.45, changePercent: 1.24 },
   { symbol: "UNH", name: "UnitedHealth Group Inc.", price: 587.91, change: -3.22, changePercent: -0.54 },
   { symbol: "JPM", name: "JPMorgan Chase & Co.", price: 221.67, change: 2.89, changePercent: 1.32 },
@@ -52,7 +57,7 @@ export const FinancialDashboard = () => {
               </Badge>
             </div>
             <div className="flex items-center space-x-4">
-              {topStocks.slice(0, 3).map((stock) => (
+              {topStocks.slice(0, 5).map((stock) => (
                 <div key={stock.symbol} className="text-right">
                   <div className="text-sm font-medium">{stock.symbol}</div>
                   <div className={`text-xs ${stock.change >= 0 ? 'text-success' : 'text-destructive'}`}>
