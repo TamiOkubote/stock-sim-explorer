@@ -15,42 +15,133 @@ interface BetaData {
 
 const mockBetaData: BetaData[] = [
   { 
-    symbol: "AAPL", 
-    beta: 1.15, 
-    correlation: 0.78, 
-    volatility: "More",
-    marketData: [
-      { period: 1, stock: 2.3, market: 1.8 },
-      { period: 2, stock: -1.5, market: -0.9 },
-      { period: 3, stock: 3.2, market: 2.1 },
-      { period: 4, stock: 0.8, market: 1.2 },
-      { period: 5, stock: -2.1, market: -1.4 },
-    ]
-  },
-  { 
-    symbol: "MSFT", 
-    beta: 0.89, 
-    correlation: 0.82, 
+    symbol: "LLY", 
+    beta: 0.92, 
+    correlation: 0.74, 
     volatility: "Less",
     marketData: [
-      { period: 1, stock: 1.8, market: 1.8 },
-      { period: 2, stock: -0.7, market: -0.9 },
-      { period: 3, stock: 2.1, market: 2.1 },
+      { period: 1, stock: 1.6, market: 1.8 },
+      { period: 2, stock: -0.8, market: -0.9 },
+      { period: 3, stock: 1.9, market: 2.1 },
       { period: 4, stock: 1.1, market: 1.2 },
-      { period: 5, stock: -1.2, market: -1.4 },
+      { period: 5, stock: -1.3, market: -1.4 },
     ]
   },
   { 
-    symbol: "NVDA", 
-    beta: 1.67, 
-    correlation: 0.71, 
+    symbol: "META", 
+    beta: 1.23, 
+    correlation: 0.68, 
     volatility: "More",
     marketData: [
-      { period: 1, stock: 4.2, market: 1.8 },
-      { period: 2, stock: -2.8, market: -0.9 },
-      { period: 3, stock: 5.1, market: 2.1 },
-      { period: 4, stock: 0.3, market: 1.2 },
-      { period: 5, stock: -3.2, market: -1.4 },
+      { period: 1, stock: 2.2, market: 1.8 },
+      { period: 2, stock: -1.1, market: -0.9 },
+      { period: 3, stock: 2.6, market: 2.1 },
+      { period: 4, stock: 1.5, market: 1.2 },
+      { period: 5, stock: -1.7, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "TSLA", 
+    beta: 2.14, 
+    correlation: 0.65, 
+    volatility: "More",
+    marketData: [
+      { period: 1, stock: 3.8, market: 1.8 },
+      { period: 2, stock: -1.9, market: -0.9 },
+      { period: 3, stock: 4.5, market: 2.1 },
+      { period: 4, stock: 2.6, market: 1.2 },
+      { period: 5, stock: -3.0, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "XOM", 
+    beta: 1.08, 
+    correlation: 0.79, 
+    volatility: "Similar",
+    marketData: [
+      { period: 1, stock: 1.9, market: 1.8 },
+      { period: 2, stock: -1.0, market: -0.9 },
+      { period: 3, stock: 2.3, market: 2.1 },
+      { period: 4, stock: 1.3, market: 1.2 },
+      { period: 5, stock: -1.5, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "UNH", 
+    beta: 0.76, 
+    correlation: 0.81, 
+    volatility: "Less",
+    marketData: [
+      { period: 1, stock: 1.4, market: 1.8 },
+      { period: 2, stock: -0.7, market: -0.9 },
+      { period: 3, stock: 1.6, market: 2.1 },
+      { period: 4, stock: 0.9, market: 1.2 },
+      { period: 5, stock: -1.1, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "JPM", 
+    beta: 1.34, 
+    correlation: 0.83, 
+    volatility: "More",
+    marketData: [
+      { period: 1, stock: 2.4, market: 1.8 },
+      { period: 2, stock: -1.2, market: -0.9 },
+      { period: 3, stock: 2.8, market: 2.1 },
+      { period: 4, stock: 1.6, market: 1.2 },
+      { period: 5, stock: -1.9, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "V", 
+    beta: 0.94, 
+    correlation: 0.77, 
+    volatility: "Less",
+    marketData: [
+      { period: 1, stock: 1.7, market: 1.8 },
+      { period: 2, stock: -0.8, market: -0.9 },
+      { period: 3, stock: 2.0, market: 2.1 },
+      { period: 4, stock: 1.1, market: 1.2 },
+      { period: 5, stock: -1.3, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "BRK.B", 
+    beta: 0.82, 
+    correlation: 0.85, 
+    volatility: "Less",
+    marketData: [
+      { period: 1, stock: 1.5, market: 1.8 },
+      { period: 2, stock: -0.7, market: -0.9 },
+      { period: 3, stock: 1.7, market: 2.1 },
+      { period: 4, stock: 1.0, market: 1.2 },
+      { period: 5, stock: -1.1, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "PG", 
+    beta: 0.61, 
+    correlation: 0.72, 
+    volatility: "Less",
+    marketData: [
+      { period: 1, stock: 1.1, market: 1.8 },
+      { period: 2, stock: -0.5, market: -0.9 },
+      { period: 3, stock: 1.3, market: 2.1 },
+      { period: 4, stock: 0.7, market: 1.2 },
+      { period: 5, stock: -0.9, market: -1.4 },
+    ]
+  },
+  { 
+    symbol: "JNJ", 
+    beta: 0.67, 
+    correlation: 0.69, 
+    volatility: "Less",
+    marketData: [
+      { period: 1, stock: 1.2, market: 1.8 },
+      { period: 2, stock: -0.6, market: -0.9 },
+      { period: 3, stock: 1.4, market: 2.1 },
+      { period: 4, stock: 0.8, market: 1.2 },
+      { period: 5, stock: -0.9, market: -1.4 },
     ]
   },
 ];

@@ -15,11 +15,16 @@ import { TrendingUp, Activity, Shield, BarChart3 } from "lucide-react";
 import { useState } from "react";
 
 const topStocks = [
-  { symbol: "AAPL", name: "Apple Inc.", price: 175.43, change: 2.34, changePercent: 1.35 },
-  { symbol: "MSFT", name: "Microsoft Corp.", price: 378.85, change: -1.22, changePercent: -0.32 },
-  { symbol: "NVDA", name: "NVIDIA Corp.", price: 891.14, change: 15.67, changePercent: 1.79 },
-  { symbol: "GOOGL", name: "Alphabet Inc.", price: 142.56, change: 0.89, changePercent: 0.63 },
-  { symbol: "AMZN", name: "Amazon.com Inc.", price: 155.21, change: -2.11, changePercent: -1.34 }
+  { symbol: "LLY", name: "Eli Lilly & Co", price: 789.45, change: 12.34, changePercent: 1.59 },
+  { symbol: "META", name: "Meta Platforms Inc.", price: 521.78, change: -8.92, changePercent: -1.68 },
+  { symbol: "TSLA", name: "Tesla Inc.", price: 243.15, change: 5.67, changePercent: 2.39 },
+  { symbol: "XOM", name: "Exxon Mobil Corp.", price: 118.23, change: 1.45, changePercent: 1.24 },
+  { symbol: "UNH", name: "UnitedHealth Group Inc.", price: 587.91, change: -3.22, changePercent: -0.54 },
+  { symbol: "JPM", name: "JPMorgan Chase & Co.", price: 221.67, change: 2.89, changePercent: 1.32 },
+  { symbol: "V", name: "Visa Inc.", price: 287.34, change: 4.12, changePercent: 1.45 },
+  { symbol: "BRK.B", name: "Berkshire Hathaway Inc.", price: 456.78, change: 6.89, changePercent: 1.53 },
+  { symbol: "PG", name: "Procter & Gamble Co.", price: 167.23, change: -1.56, changePercent: -0.92 },
+  { symbol: "JNJ", name: "Johnson & Johnson", price: 159.87, change: 0.78, changePercent: 0.49 }
 ];
 
 export const FinancialDashboard = () => {

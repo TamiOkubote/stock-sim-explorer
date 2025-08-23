@@ -12,11 +12,16 @@ interface StockData {
 }
 
 const mockStockData: StockData[] = [
-  { symbol: "AAPL", stdDev: 0.245, risk: "Medium", returns: [0.12, -0.05, 0.18, 0.03, -0.08] },
-  { symbol: "MSFT", stdDev: 0.198, risk: "Low", returns: [0.15, 0.02, -0.03, 0.09, 0.06] },
-  { symbol: "NVDA", stdDev: 0.421, risk: "High", returns: [0.35, -0.15, 0.28, -0.12, 0.19] },
-  { symbol: "GOOGL", stdDev: 0.287, risk: "Medium", returns: [0.08, 0.14, -0.06, 0.11, -0.02] },
-  { symbol: "AMZN", stdDev: 0.334, risk: "High", returns: [-0.09, 0.22, 0.04, -0.11, 0.16] }
+  { symbol: "LLY", stdDev: 0.312, risk: "High", returns: [0.18, -0.09, 0.24, 0.06, -0.12] },
+  { symbol: "META", stdDev: 0.389, risk: "High", returns: [0.22, -0.18, 0.31, -0.08, 0.15] },
+  { symbol: "TSLA", stdDev: 0.567, risk: "High", returns: [0.45, -0.28, 0.38, -0.19, 0.21] },
+  { symbol: "XOM", stdDev: 0.234, risk: "Medium", returns: [0.14, -0.06, 0.19, 0.04, -0.07] },
+  { symbol: "UNH", stdDev: 0.187, risk: "Low", returns: [0.13, 0.03, -0.02, 0.08, 0.05] },
+  { symbol: "JPM", stdDev: 0.298, risk: "Medium", returns: [0.16, -0.11, 0.21, 0.02, -0.09] },
+  { symbol: "V", stdDev: 0.156, risk: "Low", returns: [0.11, 0.07, -0.01, 0.09, 0.04] },
+  { symbol: "BRK.B", stdDev: 0.145, risk: "Low", returns: [0.09, 0.04, 0.12, 0.01, 0.06] },
+  { symbol: "PG", stdDev: 0.123, risk: "Low", returns: [0.08, 0.02, 0.05, 0.03, 0.01] },
+  { symbol: "JNJ", stdDev: 0.134, risk: "Low", returns: [0.07, 0.03, 0.09, 0.02, 0.04] }
 ];
 
 export const StandardDeviation = () => {
