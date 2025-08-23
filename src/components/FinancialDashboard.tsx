@@ -7,6 +7,10 @@ import { RiskMatrix } from "./risk/RiskMatrix";
 import { VaRDiagram } from "./risk/VaRDiagram";
 import { MetropolisHastings } from "./simulations/MetropolisHastings";
 import { StockSelector } from "./stocks/StockSelector";
+import { StandardDeviation } from "./metrics/StandardDeviation";
+import { BetaAnalysis } from "./metrics/BetaAnalysis";
+import { SharpeRatio } from "./metrics/SharpeRatio";
+import { RSquaredAnalysis } from "./metrics/RSquaredAnalysis";
 import { TrendingUp, Activity, Shield, BarChart3 } from "lucide-react";
 import { useState } from "react";
 
@@ -104,6 +108,14 @@ export const FinancialDashboard = () => {
               <RiskMatrix />
             </CardContent>
           </Card>
+        </div>
+
+        {/* Financial Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <StandardDeviation />
+          <BetaAnalysis />
+          <SharpeRatio />
+          <RSquaredAnalysis />
         </div>
 
         {/* Advanced Analytics */}
