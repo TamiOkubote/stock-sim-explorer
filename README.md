@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Advanced Monte Carlo Metrics and Insights (branch of "HOW TO BUDGET" application)
 
 ## Project info
 
