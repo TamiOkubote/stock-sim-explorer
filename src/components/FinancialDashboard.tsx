@@ -11,6 +11,7 @@ import { StandardDeviation } from "./metrics/StandardDeviation";
 import { BetaAnalysis } from "./metrics/BetaAnalysis";
 import { SharpeRatio } from "./metrics/SharpeRatio";
 import { RSquaredAnalysis } from "./metrics/RSquaredAnalysis";
+import { BlackScholesAnalysis } from "./options/BlackScholesAnalysis";
 import { TrendingUp, Activity, Shield, BarChart3 } from "lucide-react";
 import { useState } from "react";
 
@@ -130,9 +131,10 @@ export const FinancialDashboard = () => {
 
         {/* Advanced Analytics */}
         <Tabs defaultValue="var" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="var">Value at Risk</TabsTrigger>
             <TabsTrigger value="mh">Metropolis-Hastings</TabsTrigger>
+            <TabsTrigger value="bs">Black-Scholes</TabsTrigger>
           </TabsList>
           
           <TabsContent value="var" className="space-y-4">
@@ -153,6 +155,17 @@ export const FinancialDashboard = () => {
               </CardHeader>
               <CardContent>
                 <MetropolisHastings />
+              </CardContent>
+            </Card>
+          </TabsContent>
+          
+          <TabsContent value="bs" className="space-y-4">
+            <Card>
+              <CardHeader>
+                <CardTitle>Black-Scholes Options Pricing</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <BlackScholesAnalysis />
               </CardContent>
             </Card>
           </TabsContent>
