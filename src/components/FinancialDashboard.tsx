@@ -12,6 +12,8 @@ import { BetaAnalysis } from "./metrics/BetaAnalysis";
 import { SharpeRatio } from "./metrics/SharpeRatio";
 import { RSquaredAnalysis } from "./metrics/RSquaredAnalysis";
 import { BlackScholesAnalysis } from "./options/BlackScholesAnalysis";
+import { QuantTradingDashboard } from "./algorithms/QuantTradingDashboard";
+import { AlgorithmSummary } from "./algorithms/AlgorithmSummary";
 import { TrendingUp, Activity, Shield, BarChart3 } from "lucide-react";
 import { useState } from "react";
 
@@ -76,6 +78,9 @@ export const FinancialDashboard = () => {
         {/* Stock Selection */}
         <StockSelector stocks={topStocks} onAnalysisRun={handleAnalysisRun} />
 
+        {/* Algorithm Overview */}
+        <AlgorithmSummary />
+
         {/* Main Analytics Grid */}
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
           {/* MCMC Simulation */}
@@ -130,12 +135,17 @@ export const FinancialDashboard = () => {
         </div>
 
         {/* Advanced Analytics */}
-        <Tabs defaultValue="var" className="w-full">
-          <TabsList className="grid w-full grid-cols-3">
+        <Tabs defaultValue="quant" className="w-full">
+          <TabsList className="grid w-full grid-cols-4">
+            <TabsTrigger value="quant">Quant Algorithms</TabsTrigger>
             <TabsTrigger value="var">Value at Risk</TabsTrigger>
             <TabsTrigger value="mh">Metropolis-Hastings</TabsTrigger>
             <TabsTrigger value="bs">Black-Scholes</TabsTrigger>
           </TabsList>
+          
+          <TabsContent value="quant" className="space-y-4">
+            <QuantTradingDashboard />
+          </TabsContent>
           
           <TabsContent value="var" className="space-y-4">
             <Card>
