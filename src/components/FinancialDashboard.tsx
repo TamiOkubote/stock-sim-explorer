@@ -14,6 +14,14 @@ import { RSquaredAnalysis } from "./metrics/RSquaredAnalysis";
 import { BlackScholesAnalysis } from "./options/BlackScholesAnalysis";
 import { QuantTradingDashboard } from "./algorithms/QuantTradingDashboard";
 import { AlgorithmSummary } from "./algorithms/AlgorithmSummary";
+import { HiddenMarkovModels } from "./machine-learning/HiddenMarkovModels";
+import { ReinforcementLearning } from "./machine-learning/ReinforcementLearning";
+import { ClusteringAlgorithms } from "./machine-learning/ClusteringAlgorithms";
+import { BayesianMethods } from "./machine-learning/BayesianMethods";
+import { OrderFlowAnalysis } from "./execution/OrderFlowAnalysis";
+import { TWAPVWAPStrategies } from "./execution/TWAPVWAPStrategies";
+import { MarketMakingModels } from "./execution/MarketMakingModels";
+import { LiquidityModelling } from "./execution/LiquidityModelling";
 import { TrendingUp, Activity, Shield, BarChart3 } from "lucide-react";
 import { useState } from "react";
 
